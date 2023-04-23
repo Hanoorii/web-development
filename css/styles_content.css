@@ -1,0 +1,144 @@
+/* Standard*/
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+h1 {
+  font-family: "Montserrat Black";
+  font-size: 3.5rem;
+  line-height: 1.5;
+}
+
+h3 {
+  font-family: "Montserrat";
+  font-weight: 700;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+p {
+  color: black;
+}
+
+/* Headings */
+.big-heading {
+  font-family: "Montserrat";
+  font-size: 3.5rem;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.section-heading {
+  font-size: 3rem;
+  line-height: 1.5;
+}
+
+/* Containers */
+.container-fluid {
+  padding: 9% 15% 3%;
+}
+
+/*Navigation Bar*/
+.navbar {
+  padding: 1rem 0;
+}
+
+.nav-color {
+  background-color: #1687a7;
+}
+
+.nav-item {
+  padding: 0 18px;
+}
+
+.nav-link {
+  color: #f8f8f8;
+  font-family: "Montserrat";
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+/* Buttons*/
+.download-button {
+  margin: 5% 3% 5% 0%;
+}
+
+/* Title Section*/
+#title-desks {
+  background-color: #accae4;
+  color: #fff;
+  text-align: left;
+}
+
+.icon-title {
+  margin-bottom: 1rem;
+}
+
+/* Desks HTML*/
+
+
+/* Coming soon Message*/
+.coming-soon {
+  background-image: url("background.png");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  color: white;
+}
+.coming-soon h1 {
+  font-size: 5rem;
+  margin-bottom: 2rem;
+}
+.coming-soon p {
+  font-size: 1.5rem;
+  margin-bottom: 3rem;
+  color: white;
+}
+.coming-soon button {
+  font-size: 1.2rem;
+  padding: 1rem 2.5rem;
+  border-radius: 30px;
+  background-color: #fff;
+  color: #222;
+  transition: all 0.3s ease-in-out;
+}
+.coming-soon button:hover {
+  background-color: #222;
+  color: #fff;
+  transform: translateY(-3px);
+}
+
+/* Map Section */
+#map {
+  height: 500px;
+}
+
+#mapdeks {
+  display: none;
+}
+
+/* Footer Section */
+
+footer {
+  text-align: center;
+}
+
+.social-icon {
+  margin: 20px 10px;
+}
+
+@media (max-width: 990px) {
+  h1{
+    font-size: 2.5rem;
+    padding-top: 30%;
+  }
+}

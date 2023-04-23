@@ -1,0 +1,179 @@
+/* Standard */
+body {
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+}
+
+h1{
+    font-family: "Montserrat Black";
+    font-size: 3.5rem;
+    line-height: 1.5;
+}
+
+h3{
+    font-family: "Montserrat";
+    font-weight: 700;
+}
+
+img{
+    height: auto;
+    max-width: 100%;
+}
+
+p {
+   color: #8f8f8f;
+}
+
+/* Headings */
+
+.big-heading {
+    font-family: "Montserrat";
+    font-size: 3.5rem;
+    font-weight: 600;
+    line-height: 1.5;
+  }
+  
+  .section-heading {
+    font-size: 3rem;
+    line-height: 1.5;
+  }
+  
+/* Containers */
+  
+.container-fluid{
+    padding: 9% 15% 3%;
+}
+
+/* Sections */
+
+.colored-section {
+    background-color: #1687A7;
+    color: #fff;
+  }
+  
+  .white-section {
+    background-color: #fff;
+  }
+
+/*Navigation Bar*/
+.navbar{
+    padding: 1rem 0;
+}
+
+.nav-color{
+    background-color: #1687A7;
+}
+
+.nav-item{
+    padding: 0 18px;
+}
+
+.nav-link{
+    color: #f8f8f8;
+    font-family: "Montserrat";
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+.navbar-expand-lg{
+  margin-bottom: 1rem;
+}
+
+/* Buttons*/
+.download-button{
+    margin: 5% 3% 5% 0%
+}
+.desk-button{
+  margin: 5% 3% 5% 0%
+}
+.room-button{
+  margin: 5% 3% 5% 0%
+}
+
+/* Title Section*/
+#title{
+    background-color: #B9D7EA;
+    color: white;
+    text-align: left;
+}
+
+.icon-title{
+    margin-bottom: 1rem;
+}
+
+.fa-magnifying-glass{
+  color: #fff;
+}
+
+/* Features Section*/
+#features{
+    position: relative;
+    padding: 4% 15%;
+}
+
+.feature-box{
+    text-align: center;
+    padding: 2%;
+}
+
+.icon-title{
+    margin-bottom: 1rem;
+}
+
+/* Testimonial Section */
+#testimonials {
+    background-color: #B9D7EA;
+  }
+  
+  .testimonial-text {
+    font-size: 3rem;
+    line-height: 1.5;
+  }
+  
+  .testimonial-image {
+    width: 20%;
+    border-radius: 100%;
+    margin: 20px;
+  }
+  
+  
+  #press {
+    background-color: #B9D7EA;
+    padding-bottom: 3%;
+  }
+  
+  .press-logo {
+    width: 15%;
+    margin: 20px 20px 50px;
+  }
+
+
+/* Footer Section */
+
+.social-icon {
+    margin: 20px 10px;
+  }
+  
+  @media (max-width: 990px) {
+  
+    #title {
+      text-align: center;
+    }
+  
+    .title-image {
+      position: static;
+    }
+
+    h1{
+      font-size: 2.5rem;
+      padding-top: 30%;
+    }
+
+    .big-heading{
+      font-size: 2.5rem;
+    }
+
+    .testimonial-text {
+      font-size: 2rem;
+      line-height: 1.5;
+    }
+  }

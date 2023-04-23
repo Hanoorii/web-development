@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Desk sharing management</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700;900&family=Ubuntu&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+
+    <!-- CSS Stylesheets -->
+    <link rel="stylesheet" href="css/styles_index.css" />
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/48776f305f.js" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+    <section id="title">
+      <div class="container-fluid pt-20">
+        <!-- Navigationbar -->
+        <nav class="navbar navbar-expand-lg fixed-top navbar-dark nav-color">
+          <a class="navbar-brand" href="index.html"><img src="images/logo_small.png" class="img-fluid" alt="logo-png" /></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler01" aria-controls="navbarToggler01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarToggler01">
+            <ul class="navbar-nav ml-auto">
+              <li class="navbar-item">
+                <a class="nav-link" href="desks.html">Desks</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="rooms.html">Rooms</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="" role="button" data-bs-toggle="dropdown" aria-expanded="false">Bookings</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="bookings.html">My Bookings</a></li>
+                  <li><a class="dropdown-item" href="bookings.html">All Bookings</a></li>
+                  <li>
+                    <hr class="dropdown-divider" />
+                  </li>
+                  <li><a class="dropdown-item" href="bookings.html">Booking History</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </nav>
+
+        <!-- Title -->
+        
+        <div class="row">
+          <div class="col-lg-6">
+            <h1>Find your space, book your place! Simple. Fast. Spacetop!</h1>
+            <button type="button" class="btn btn-dark btn-lg desk-button" onclick="location.href='desks.html';"><i class="fa-solid fa-magnifying-glass"></i> Book Desk</button>
+            <button id="book-room-btn" type="button" class="btn btn-outline-light btn-lg room-button" onclick="location.href='rooms.html';"><i class="fa-solid fa-door-closed"></i> Book Room</button>
+          </div>
+
+          <div class="col-lg-6">
+            <img class="title-image" src="images/title-image.png" alt="title-img" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features -->
+
+    <section id="features">
+      <div class="row">
+        <div class="feature-box col-lg-4">
+          <img class="icon-title" src="icons/check.png" alt="check-png" />
+          <h3>Easy to use.</h3>
+          <p class="title-desc">So easy to use, even your grandmother could book a desk.</p>
+        </div>
+
+        <div class="feature-box col-lg-4">
+          <img class="icon-title" src="icons/desk.png" alt="desk-png" />
+          <h3>Desks</h3>
+          <p class="title-desc">All desks with their availability clearly arranged in one place.</p>
+        </div>
+
+        <div class="feature-box col-lg-4">
+          <img class="icon-title" src="icons/room.png" alt="room-png" />
+          <h3>Rooms</h3>
+          <p class="title-desc">All rooms with their availability and capacity clearly arranged in one place.</p>
+        </div>
+      </div>
+    </section>
+
+<!-- Testimonials -->
+
+  <section class="colored-section" id="testimonials">
+
+    <div id="testimonial-carousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active container-fluid">
+          <div class="row justify-content-center">
+            <div class="col-md-8 col-lg-6 text-center">
+          <h2 class="testimonial-text">«I don't have to worry about my place of work anymore. I can easily and flexibly plan my week.»</h2>
+          <img class="testimonial-image" src="images/person_1.jpg" alt="person-1">
+          <em>Jérémie, St. Gallen</em>
+        </div>
+      </div>
+    </div>
+        <div class="carousel-item container-fluid">
+          <div class="row justify-content-center">
+            <div class="col-md-8 col-lg-6 text-center">
+          <h2 class="testimonial-text">«The Spacetop website is a game-changer! It's quick, reliable, and simplifies the entire booking process. Highly recommend it!»</h2>
+          <img class="testimonial-image" src="images/person_2.jpg" alt="person-2">
+          <em>Jessica, Rorschach</em>
+        </div>
+        </div>
+      </div>
+      <div class="carousel-item container-fluid">
+        <div class="row justify-content-center">
+          <div class="col-md-8 col-lg-6 text-center">
+        <h2 class="testimonial-text">«Using Spacetop has made scheduling a breeze! It's user-friendly and efficient, with clear instructions and simple navigation. Highly recommended!»</h2>
+        <img class="testimonial-image" src="images/person_3.jpg" alt="person-2">
+        <em>Patrick, Arbon</em>
+      </div>
+      </div>
+    </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#testimonial-carousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#testimonial-carousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+  </section>
+
+
+  <!-- Press Section -->
+
+  <section class="colored-section" id="press">
+    <img class="press-logo" src="images/swisscom.png" alt="swisscom-logo">
+    <img class="press-logo" src="images/sbb.png" alt="sbb-logo">
+    <img class="press-logo" src="images/helvetia.png" alt="helvetia-logo">
+    <img class="press-logo" src="images/cs.png" alt="cs-logo">
+
+  </section>
+
+
+  <!-- Call Section -->
+
+  <section class="colored-section" id="cta">
+
+    <div class="container-fluid">
+
+      <h3 class="big-heading">Find the right desk today and get started!</h3>
+      <button type="button" class="btn btn-dark btn-lg desk-button" onclick="location.href='desks.html';"><i class="fa-solid fa-magnifying-glass"></i> Book Desk</button>
+      <button id="book-room-btn" type="button" class="btn btn-outline-light btn-lg room-button" onclick="location.href='rooms.html';"><i class="fa-solid fa-door-closed"></i> Book Room</button>
+    </div>
+  </section>
+
+
+  <!-- Footer -->
+
+  <footer class="white-section" id="footer">
+    <div class="container-fluid">
+      <i class="social-icon fab fa-facebook-f" link="www.facebook.com"></i>
+      <i class="social-icon fab fa-twitter"></i>
+      <i class="social-icon fab fa-instagram"></i>
+      <i class="social-icon fas fa-envelope"></i>
+      <p>© Copyright 2023 SpaceTop</p>
+    </div>
+  </footer>
+  </body>
+</html>

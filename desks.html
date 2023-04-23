@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Desk sharing management</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+
+    <!-- JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+
+    <!-- Fonts -->
+
+    <!-- FavIcon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png" />
+
+    <!-- CSS Stylesheets -->
+    <link rel="stylesheet" href="css/styles_content.css" />
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/48776f305f.js" crossorigin="anonymous"></script>
+
+    <!-- MAP -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+  </head>
+
+  <body>
+    <script src="js/desks.js"></script>
+
+    <section id="title-desks">
+      <!-- Navigationbar -->
+      <nav class="navbar navbar-expand-lg fixed-top navbar-dark nav-color">
+        <a class="navbar-brand" href="index.html"><img src="images/logo_small.png" class="img-fluid" alt="logo-png" /></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler01" aria-controls="navbarToggler01" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarToggler01">
+          <ul class="navbar-nav ml-auto">
+            <li class="navbar-item">
+              <a class="nav-link" href="desks.html">Desks</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="rooms.html">Rooms</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="" role="button" data-bs-toggle="dropdown" aria-expanded="false">Bookings</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="bookings.html">My Bookings</a></li>
+                <li><a class="dropdown-item" href="bookings.html">All Bookings</a></li>
+                <li>
+                  <hr class="dropdown-divider" />
+                </li>
+                <li><a class="dropdown-item" href="bookings.html">Booking History</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </section>
+
+    <!-- Booking Request -->
+    <div class="container-fluid" id="title-desks">
+      <h1>Desks</h1>
+      <p>Here you will find an overview of all existing desks including all necessary information. For an overview, the desks can also be searched via the map.</p>
+      <!-- Button - Book a Desk -->
+      <button class="btn btn-outline-light btn-lg room-button" data-bs-toggle="modal" data-bs-target="#bookDeskModal">Book a desk</button>
+    </div>
+
+    <!-- Dialog - Input Fields -->
+    <div class="modal fade" id="bookDeskModal" tabindex="-1" aria-labelledby="bookDeskModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="bookDeskModalLabel">Book a Desk</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <label for="desk" class="form-label">Desk<span class="text-danger">*</span>:</label>
+                <select class="form-select" id="desk" name="desk" required>
+                  <option selected disabled>Select a desk</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label for="name" class="form-label">Name:</label>
+                <input type="text" class="form-control" id="name" />
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">Email<span class="text-danger">*</span>:</label>
+                <input type="email" class="form-control" id="email" required />
+              </div>
+              <div class="mb-3">
+                <label for="date" class="form-label">Date<span class="text-danger">*</span>:</label>
+                <input type="date" class="form-control" id="date" required />
+              </div>
+              <div class="mb-3 row">
+                <div class="col-md-6">
+                  <label for="start-time" class="form-label">Start time<span class="text-danger">*</span>:</label>
+                  <input type="time" class="form-control" id="start-time" required />
+                </div>
+                <div class="col-md-6">
+                  <label for="end-time" class="form-label">End time<span class="text-danger">*</span>:</label>
+                  <input type="time" class="form-control" id="end-time" required />
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="Duration" class="form-label">Duration (hours):</label>
+                <input type="number" class="form-control" id="duration" readonly />
+              </div>
+              <button type="button" class="btn btn-outline-info" id="calculate-btn">Calculate</button>
+              <div class="mb-3 row">
+                <div class="col-md-6">
+                  <label for="total-chf" class="form-label">Total Price (CHF):</label>
+                  <input type="number" class="form-control" id="total-chf" readonly />
+                </div>
+                <div class="col-md-6">
+                  <label for="total-eur" class="form-label">Total Price (EUR):</label>
+                  <input type="number" class="form-control" id="total-eur" readonly />
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" id="close-btn" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary" id="book-btn">Book</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Desk Content -->
+    <section id="desk content">
+      <div class="container-fluid">
+        <h1>Desk Overview</h1>
+        <div class="table-responsive">
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                <th data-sort="id">ID <i class="fas fa-sort"></i></th>
+                <th data-sort="name">Name <i class="fas fa-sort"></i></th>
+                <th data-sort="available">Availability <i class="fas fa-sort"></i></th>
+                <th data-sort="address">Address <i class="fas fa-sort"></i></th>
+                <th data-sort="price">Price per hour (CHF) <i class="fas fa-sort"></i></th>
+                <th data-sort="price">Price per hour (EUR) <i class="fas fa-sort"></i></th>
+                <th data-sort="lat">Lat</th>
+                <th data-sort="lon">Lon</th>
+                <th data-sort="comment">Comment</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Map Content -->
+    <div class="container-fluid">
+      <h1>Map Overview</h1>
+      <div id="map"></div>
+      <table id="map-desks">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Lat</th>
+            <th>Lon</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+
+    <!-- Footer -->
+
+    <footer class="white-section" id="footer">
+      <div class="container-fluid">
+        <i class="social-icon fab fa-facebook-f" link="www.facebook.com"></i>
+        <i class="social-icon fab fa-twitter"></i>
+        <i class="social-icon fab fa-instagram"></i>
+        <i class="social-icon fas fa-envelope"></i>
+        <p>© Copyright 2023 SpaceTop</p>
+      </div>
+    </footer>
+  </body>
+</html>
