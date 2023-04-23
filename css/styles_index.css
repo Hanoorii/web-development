@@ -23,6 +23,7 @@ img{
 
 p {
    color: #8f8f8f;
+   font-family: "Ubuntu";
 }
 
 /* Headings */
@@ -30,7 +31,7 @@ p {
 .big-heading {
     font-family: "Montserrat";
     font-size: 3.5rem;
-    font-weight: 600;
+    font-weight: 700;
     line-height: 1.5;
   }
   
@@ -40,13 +41,11 @@ p {
   }
   
 /* Containers */
-  
 .container-fluid{
     padding: 9% 15% 3%;
 }
 
 /* Sections */
-
 .colored-section {
     background-color: #1687A7;
     color: #fff;
@@ -126,6 +125,7 @@ p {
   }
   
   .testimonial-text {
+    font-family: 'Montserrat';
     font-size: 3rem;
     line-height: 1.5;
   }
