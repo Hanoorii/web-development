@@ -5,8 +5,9 @@ body {
 }
 
 h1 {
-  font-family: "Montserrat Black";
+  font-family: "Montserrat";
   font-size: 3.5rem;
+  font-weight: 900;
   line-height: 1.5;
 }
 
@@ -136,7 +137,7 @@ footer {
   margin: 20px 10px;
 }
 
-@media (max-width: 990px) {
+@media (max-width: 1080px) {
   h1{
     font-size: 2.5rem;
     padding-top: 30%;
